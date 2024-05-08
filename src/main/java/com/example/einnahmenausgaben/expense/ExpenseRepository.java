@@ -1,8 +1,6 @@
-package com.example.einnahmenausgaben.repository;
+package com.example.einnahmenausgaben.expense;
 
-import com.example.einnahmenausgaben.entity.Expense;
-import com.example.einnahmenausgaben.entity.Income;
-import com.example.einnahmenausgaben.entity.UserEntity;
+import com.example.einnahmenausgaben.auth.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

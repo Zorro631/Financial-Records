@@ -1,10 +1,6 @@
-package com.example.einnahmenausgaben.service;
+package com.example.einnahmenausgaben.expense;
 
-import com.example.einnahmenausgaben.entity.Expense;
-import com.example.einnahmenausgaben.entity.Income;
-import com.example.einnahmenausgaben.entity.UserEntity;
-import com.example.einnahmenausgaben.repository.ExpenseRepository;
-import com.example.einnahmenausgaben.repository.IncomeRepository;
+import com.example.einnahmenausgaben.auth.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

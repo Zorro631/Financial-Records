@@ -1,15 +1,8 @@
-package com.example.einnahmenausgaben.controller;
+package com.example.einnahmenausgaben.expense;
 
-import com.example.einnahmenausgaben.dto.ExpenseDto;
-import com.example.einnahmenausgaben.dto.IncomeDto;
-import com.example.einnahmenausgaben.entity.Expense;
-import com.example.einnahmenausgaben.entity.Income;
-import com.example.einnahmenausgaben.entity.UserEntity;
-import com.example.einnahmenausgaben.repository.UserRepository;
-import com.example.einnahmenausgaben.service.ExpenseService;
-import com.example.einnahmenausgaben.service.IncomeService;
+import com.example.einnahmenausgaben.auth.UserEntity;
+import com.example.einnahmenausgaben.auth.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;

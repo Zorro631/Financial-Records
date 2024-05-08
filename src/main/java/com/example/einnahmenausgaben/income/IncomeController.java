@@ -1,10 +1,7 @@
-package com.example.einnahmenausgaben.controller;
+package com.example.einnahmenausgaben.income;
 
-import com.example.einnahmenausgaben.dto.IncomeDto;
-import com.example.einnahmenausgaben.entity.Income;
-import com.example.einnahmenausgaben.entity.UserEntity;
-import com.example.einnahmenausgaben.repository.UserRepository;
-import com.example.einnahmenausgaben.service.IncomeService;
+import com.example.einnahmenausgaben.auth.UserEntity;
+import com.example.einnahmenausgaben.auth.UserRepository;
 //import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -34,6 +31,7 @@ public class IncomeController {
         String username = authentication.getName();
         UserEntity user = userRepository.findByUsername(username)
                 .orElseThrow(() -> new RuntimeException("User not found"));
+
         income.setUserEntity(user);
         return incomeService.addIncome(income);
     }
@@ -53,7 +51,15 @@ public class IncomeController {
 //        List<Income> userIncomes = incomeService.getAllIncome(user);
 //        return new ResponseEntity<>(userIncomes, HttpStatus.OK);
     }
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> deleteIncome(@PathVariable Long id) {
+        if (!incomeService.existsById(id)) {
+            return ResponseEntity.notFound().build();
+        }
 
+        incomeService.deleteById(id);
+        return ResponseEntity.ok().build();
+    }
     @GetMapping("/test")
     public ResponseEntity<String> test() {
 //        return "test";

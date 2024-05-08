@@ -1,12 +1,11 @@
-package com.example.einnahmenausgaben.controller;
+package com.example.einnahmenausgaben.records;
 
-import com.example.einnahmenausgaben.dto.FinancialRecordDTO;
-import com.example.einnahmenausgaben.entity.Expense;
-import com.example.einnahmenausgaben.entity.Income;
-import com.example.einnahmenausgaben.entity.UserEntity;
-import com.example.einnahmenausgaben.repository.ExpenseRepository;
-import com.example.einnahmenausgaben.repository.IncomeRepository;
-import com.example.einnahmenausgaben.repository.UserRepository;
+import com.example.einnahmenausgaben.expense.Expense;
+import com.example.einnahmenausgaben.income.Income;
+import com.example.einnahmenausgaben.auth.UserEntity;
+import com.example.einnahmenausgaben.expense.ExpenseRepository;
+import com.example.einnahmenausgaben.income.IncomeRepository;
+import com.example.einnahmenausgaben.auth.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/finances")

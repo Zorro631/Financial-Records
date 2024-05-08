@@ -1,4 +1,4 @@
-package com.example.einnahmenausgaben.dto;
+package com.example.einnahmenausgaben.records;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,8 +8,11 @@ import java.time.LocalDate;
 import java.util.Date;
 @Data
 @AllArgsConstructor
-public class IncomeDto {
+public class FinancialRecordDTO {
     private BigDecimal amount;
     private String description;
     private LocalDate date;
+    private String type; // "Income" oder "Expense"
+
+
 }

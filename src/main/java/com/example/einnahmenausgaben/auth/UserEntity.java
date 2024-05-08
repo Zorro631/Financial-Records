@@ -1,4 +1,4 @@
-package com.example.einnahmenausgaben.entity;
+package com.example.einnahmenausgaben.auth;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,11 +1,5 @@
-package com.example.einnahmenausgaben.controller;
+package com.example.einnahmenausgaben.auth;
 
-import com.example.einnahmenausgaben.dto.LoginDto;
-import com.example.einnahmenausgaben.dto.RegisterDto;
-import com.example.einnahmenausgaben.entity.Role;
-import com.example.einnahmenausgaben.entity.UserEntity;
-import com.example.einnahmenausgaben.repository.RoleRepository;
-import com.example.einnahmenausgaben.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -36,7 +30,6 @@ public class AuthController {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
         this.passwordEncoder = passwordEncoder;
-
     }
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody LoginDto loginDto){

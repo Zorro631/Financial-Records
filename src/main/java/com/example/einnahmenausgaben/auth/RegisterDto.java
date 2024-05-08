@@ -1,4 +1,4 @@
-package com.example.einnahmenausgaben.dto;
+package com.example.einnahmenausgaben.auth;
 
 import lombok.Data;
 

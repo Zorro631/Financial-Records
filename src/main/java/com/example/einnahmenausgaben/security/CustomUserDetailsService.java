@@ -1,8 +1,8 @@
 package com.example.einnahmenausgaben.security;
 
-import com.example.einnahmenausgaben.entity.Role;
-import com.example.einnahmenausgaben.entity.UserEntity;
-import com.example.einnahmenausgaben.repository.UserRepository;
+import com.example.einnahmenausgaben.auth.Role;
+import com.example.einnahmenausgaben.auth.UserEntity;
+import com.example.einnahmenausgaben.auth.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

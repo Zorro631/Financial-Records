@@ -1,6 +1,6 @@
-package com.example.einnahmenausgaben.repository;
+package com.example.einnahmenausgaben.auth;
 
-import com.example.einnahmenausgaben.entity.Role;
+import com.example.einnahmenausgaben.auth.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
